@@ -1,0 +1,35 @@
+{
+  "name": "happyplankceramics2",
+  "version": "1.0.0",
+  "description": "tammy's pottery website",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "@types/node": "^12.12.11",
+    "html-webpack-plugin": "^3.2.0",
+    "typescript": "^3.7.2",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "devDependencies": {
+    "awesome-typescript-loader": "^5.2.1",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --config webpack.dev.config.js",
+    "build": "webpack --config webpack.prod.config.js --display-error-details",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tammytan95/happyplankceramics2.git"
+  },
+  "keywords": [
+    "pottery"
+  ],
+  "author": "Tammy Tan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tammytan95/happyplankceramics2/issues"
+  },
+  "homepage": "https://github.com/tammytan95/happyplankceramics2#readme"
+}
