@@ -3,7 +3,7 @@ const path = require("path");
 const { CheckerPlugin } = require("awesome-typescript-loader");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 
-const entry = path.resolve(__dirname, "./client/index.ts");
+const entry = path.resolve(__dirname, "./client/index.tsx");
 
 const output = {
   // path: path.resolve(__dirname, "dist"),
