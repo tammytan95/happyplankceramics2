@@ -7,6 +7,7 @@ import { Provider } from "react-redux";
 import { App } from "./containers/App";
 import { setLocationActionCreator } from "./actions";
 // we are adding composeWithDevTools here to get easy access to the Redux dev tools
+//creating store here
 
 const store = createStore(reducers, composeWithDevTools());
 
