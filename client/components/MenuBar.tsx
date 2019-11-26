@@ -1,31 +1,28 @@
+// //HOW TO UPDATE MENU ITEM NAME AND LINK INFORMATION DYNAMICALLY?
 // import React, { Component } from "react";
-// import { MenuItemProps, MenuItemState } from "./MenuItem";
+// import { MenuItemProps, MenuItemState, MenuItem } from "./MenuItem";
 
-// interface MenuBarProps {}
+// interface MenuBarProps {
+//   menuItems: MenuItemProps[]; //Shop, Magazine, About, Cart
+// }
 
-// export class MenuItem extends Component<MenuItemProps, MenuItemState> {
-//   constructor(props: MenuItemProps) {
-//     super(props);
-//     this.state = {
-//       isOpen: false
-//     };
-//   }
+// export class MenuBar extends Component<MenuBarProps> {
 //   render() {
-//     const { displayName, links } = this.props;
-//     const { isOpen } = this.state;
+//     const { menuItems } = this.props;
 
 //     return (
-//       <div style={{ border: "1px solid blue" }}>
-//         <div
-//           onClick={() =>
-//             this.setState({
-//               isOpen: !isOpen
-//             })
-//           }
-//         >
-//           {displayName}
-//         </div>
-//         {isOpen ? <OpenDropdown links={links} /> : null}
+//       <div style={{ border: "1px solid red" }}>
+//         {menuItems.map((menuItems, i) => {
+//           const { displayName } = menuItems;
+
+//           return (
+//             <MenuItem
+//               {...{
+//                 displayName
+//               }}
+//             />
+//           );
+//         })}
 //       </div>
 //     );
 //   }

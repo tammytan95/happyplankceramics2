@@ -2,12 +2,12 @@ import React, { Component } from "react";
 import { Link, SingleLink } from "./Link";
 import { OpenDropdown } from "./OpenDropdown";
 
-interface MenuItemProps {
-  displayName: string;
-  links: SingleLink[];
+export interface MenuItemProps {
+  displayName: string; //Shop
+  links: SingleLink[]; //Cups, bowls, plates
 }
 
-interface MenuItemState {
+export interface MenuItemState {
   isOpen: boolean;
 }
 

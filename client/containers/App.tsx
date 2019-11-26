@@ -25,15 +25,15 @@ class _App extends Component<AppProps> {
           displayName="Shop"
           links={[
             {
-              target: "sampleUrl1.jpg",
-              displayName: "sampleUrlName1",
+              target: "All Page",
+              displayName: "All",
               handleOnClick: target => {
                 console.log("from App", target);
               }
             },
             {
-              target: "sampleUrl2.jpg",
-              displayName: "sampleUrlName2",
+              target: "Bowls Page",
+              displayName: "Bowls",
               handleOnClick: target => {
                 console.log("from App", target);
               }
@@ -41,18 +41,42 @@ class _App extends Component<AppProps> {
           ]}
         ></MenuItem>
         <MenuItem
-          displayName="Shop"
+          displayName="Zine"
           links={[
             {
-              target: "sampleUrl1.jpg",
-              displayName: "sampleUrlName1",
+              target: "Issue1 Page",
+              displayName: "Issue1",
               handleOnClick: target => {
                 console.log("from App", target);
               }
             },
             {
-              target: "sampleUrl2.jpg",
-              displayName: "sampleUrlName2",
+              target: "Issue2 Page",
+              displayName: "Issue2",
+              handleOnClick: target => {
+                console.log("from App", target);
+              }
+            }
+          ]}
+        ></MenuItem>
+        <MenuItem
+          displayName="About"
+          links={[
+            {
+              target: "About Page",
+              displayName: "",
+              handleOnClick: target => {
+                console.log("from App", target);
+              }
+            }
+          ]}
+        ></MenuItem>
+        <MenuItem
+          displayName="Cart"
+          links={[
+            {
+              target: "Cart Page",
+              displayName: "",
               handleOnClick: target => {
                 console.log("from App", target);
               }
