@@ -19,7 +19,10 @@ module.exports = {
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".jsx"]
   },
-  devServer: { port: 3000 },
+  devServer: {
+    port: 3000,
+    proxy: { "/path": "http://localhost:4000" }
+  },
   module: {
     rules: [
       {

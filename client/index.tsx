@@ -18,6 +18,13 @@ render(
   document.getElementById("root")
 );
 
+//Understand redux flow:
+//store holds state
+//action creators create actions --> happens on an event
+//actions are dispatched to reducers (meaning action creators are passed as props via containers to components so that component can call action creator)
+//reducers "catch" or interpret actions and then update state
+
+//this is how you dispatch actions to the store without using react
 // setTimeout(() => {
 //   store.dispatch(setLocationActionCreator("aboutme"));
 // }, 3000);

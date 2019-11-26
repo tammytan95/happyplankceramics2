@@ -3,16 +3,17 @@ const path = require("path");
 const { CheckerPlugin } = require("awesome-typescript-loader");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 
-const entry = path.resolve(__dirname, "./client/index.ts");
+const entry = path.resolve(__dirname, "./client/index.tsx");
 
 const output = {
+  //assume no need because it defaults
   // path: path.resolve(__dirname, "dist"),
   publicPath: "/",
   filename: "bundle.js"
 };
 
 module.exports = {
-  mode: "development",
+  mode: "production",
   entry,
   output,
   devtool: "eval-source-map",

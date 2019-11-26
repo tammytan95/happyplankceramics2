@@ -22,6 +22,7 @@ const navigation: (state: NavigationState, action: any) => NavigationState = (
 ) => {
   switch (action.type) {
     case "SET_LOCATION": {
+      //updateIn updates an object
       return updateIn(state, ["location"], () => action.payload.location);
     }
   }
@@ -30,8 +31,12 @@ const navigation: (state: NavigationState, action: any) => NavigationState = (
 
 export default navigation;
 
-//function , not a reducer, that returns location
+//function , not a reducer, that gets state of location
 //this is a selector
 export const locationSelector: (
   state: RootState
 ) => "homepage" | "aboutme" = state => state.navigation.location;
+
+export const isLocationHomepageSelector: (
+  state: RootState
+) => boolean = state => state.navigation.location === "homepage";
