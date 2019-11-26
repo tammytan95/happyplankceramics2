@@ -4,7 +4,9 @@ import reducers from "./reducers/index";
 import React from "react";
 import { render } from "react-dom";
 import { Provider } from "react-redux";
-import { App } from "./containers/App";
+// import { App } from "./containers/App";
+import { Header } from "./containers/Header";
+import { Body } from "./containers/Body";
 import { setLocationActionCreator } from "./actions";
 // we are adding composeWithDevTools here to get easy access to the Redux dev tools
 //creating store here
@@ -13,7 +15,9 @@ const store = createStore(reducers, composeWithDevTools());
 
 render(
   <Provider store={store}>
-    <App></App>
+    {/* <App></App> */}
+    <Header></Header>
+    <Body></Body>
   </Provider>,
   document.getElementById("root")
 );
