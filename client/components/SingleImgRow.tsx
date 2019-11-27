@@ -1,24 +1,20 @@
 import React, { Component } from "react";
-import { string } from "prop-types";
+import { Image, SingleImage } from "./Image";
+
+export interface SingleImgRowInterface extends SingleImgRowProps {}
 
 interface SingleImgRowProps {
-  displayName: string;
-  imgTarget: string;
-  img: string;
-  handleOnClick: (target: string) => void;
+  image: SingleImage;
 }
 
 export class SingleImgRow extends Component<SingleImgRowProps> {
   render() {
-    const { imgTarget, handleOnClick, img, displayName } = this.props;
     return (
-      <div
-        style={{ border: "1px solid green" }}
-        onClick={() => {
-          handleOnClick(imgTarget);
-        }}
-      >
-        {displayName}
+      <div style={{ border: "1px solid green" }}>
+        <Image
+          // Image interface is the same shape as Image Props and this is basically deconstructuring the keys in image props
+          {...this.props.image}
+        ></Image>
       </div>
     );
   }

@@ -1,41 +1,26 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Action } from "redux";
 import { RootState } from "../reducers";
-import {
-  locationSelector,
-  isLocationHomepageSelector
-} from "../reducers/navigation";
-import { setLocationActionCreator } from "../actions";
-import { SingleImgRow } from "../components";
+import { Gallery } from "../components";
 
 interface BodyProps {
-  location: "homepage" | "aboutme";
-  setLocation: (location: "homepage" | "aboutme") => Action;
+  frontPgImageRows?: any;
 }
 
-//onclick of singleImg, we want to update location on App
+//1 - We want to pass props from state (initial state is in the reducer) to this body component.
 class _Body extends Component<BodyProps> {
   render() {
-    return (
-      <div>
-        <SingleImgRow
-          displayName="Img1"
-          imgTarget="Product Page/Img 1"
-          img="Img1.jpg"
-          handleOnClick={imgTarget => {
-            console.log("from Body", imgTarget);
-          }}
-        />
-      </div>
-    );
+    return <Gallery imageRows={this.props.frontPgImageRows}></Gallery>;
   }
 }
 
 export const Body = connect(
   (state: RootState) => ({
-    location: locationSelector(state),
-    isLocationHomepage: isLocationHomepageSelector(state)
+    //2 - map state to props - basically we need to create variable that is the value of the prop we want
+    //in images reducer, frontPgImageRows' initial state is an array of img objects
+    frontPgImageRows: state.images.frontPgImages
   }),
-  { setLocation: setLocationActionCreator }
+  {
+    //map dispatch to props
+  }
 )(_Body);
