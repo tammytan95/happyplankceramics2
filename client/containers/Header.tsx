@@ -24,7 +24,10 @@ class _Header extends Component<HeaderProps> {
           display: "flex",
           flexDirection: "row",
           border: "1px solid purple",
-          justifyContent: "space-between"
+          justifyContent: "space-between",
+          fontSize: "15px",
+          fontFamily: "Heebo, sans-serif",
+          fontWeight: "bolder"
         }}
       >
         {this.props.location}
@@ -37,18 +40,18 @@ class _Header extends Component<HeaderProps> {
           }}
         >
           <MenuItem
-            displayName="Shop"
+            displayName="SHOP"
             links={[
               {
                 target: "All Page",
-                displayName: "All",
+                displayName: "ALL",
                 handleOnClick: target => {
                   console.log("from Header", target);
                 }
               },
               {
                 target: "Bowls Page",
-                displayName: "Bowls",
+                displayName: "BOWLS",
                 handleOnClick: target => {
                   console.log("from Header", target);
                 }
@@ -56,18 +59,18 @@ class _Header extends Component<HeaderProps> {
             ]}
           ></MenuItem>
           <MenuItem
-            displayName="Zine"
+            displayName="ZINE"
             links={[
               {
                 target: "Issue1 Page",
-                displayName: "Issue1",
+                displayName: "ISSUE1",
                 handleOnClick: target => {
                   console.log("from Header", target);
                 }
               },
               {
                 target: "Issue2 Page",
-                displayName: "Issue2",
+                displayName: "ISSUE2",
                 handleOnClick: target => {
                   console.log("from Header", target);
                 }
@@ -83,7 +86,7 @@ class _Header extends Component<HeaderProps> {
           }}
         >
           <MenuItem
-            displayName="Happy Plank Ceramics"
+            displayName="HAPPY PLANK CERAMICS"
             links={[
               {
                 target: "HomePage",
@@ -103,7 +106,7 @@ class _Header extends Component<HeaderProps> {
           }}
         >
           <MenuItem
-            displayName="About"
+            displayName="ABOUT"
             links={[
               {
                 target: "About Page",
@@ -115,7 +118,7 @@ class _Header extends Component<HeaderProps> {
             ]}
           ></MenuItem>
           <MenuItem
-            displayName="Cart"
+            displayName="CART"
             links={[
               {
                 target: "Cart Page",
