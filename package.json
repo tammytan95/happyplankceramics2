@@ -29,7 +29,7 @@
   },
   "scripts": {
     "start": "node server/server.js",
-    "build": "webpack --config webpack.prod.config.js --display-error-details",
+    "build": "webpack --config webpack.config.js --display-error-details",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node server/server.js & webpack-dev-server --open "
   },

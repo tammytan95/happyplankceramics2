@@ -20,7 +20,11 @@ module.exports = {
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".jsx"]
   },
-  // devServer: { port: 3000 },
+  devServer: {
+    port: 8080,
+    proxy: { "/path": "http://localhost:3000" },
+    contentBase: path.join(__dirname, "./dist")
+  },
   module: {
     rules: [
       {
