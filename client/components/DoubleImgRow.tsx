@@ -14,7 +14,7 @@ export class DoubleImgRow extends Component<DoubleImgRowProps> {
     return (
       <div
         style={{
-          // border: "1px solid green",
+          border: "1px solid green",
           display: "flex"
         }}
       >
