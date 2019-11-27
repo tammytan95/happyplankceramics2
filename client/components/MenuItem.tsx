@@ -23,7 +23,11 @@ export class MenuItem extends Component<MenuItemProps, MenuItemState> {
     const { isOpen } = this.state;
 
     return (
-      <div style={{ border: "1px solid blue" }}>
+      <div
+        style={{
+          border: "1px solid blue"
+        }}
+      >
         <div
           onClick={() =>
             this.setState({

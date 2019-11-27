@@ -19,82 +19,114 @@ interface HeaderProps {
 class _Header extends Component<HeaderProps> {
   render() {
     return (
-      <div>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          border: "1px solid purple",
+          justifyContent: "space-between"
+        }}
+      >
         {this.props.location}
-        <MenuItem
-          displayName="Shop"
-          links={[
-            {
-              target: "All Page",
-              displayName: "All",
-              handleOnClick: target => {
-                console.log("from Header", target);
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            border: "1px solid red",
+            justifyContent: "space-between"
+          }}
+        >
+          <MenuItem
+            displayName="Shop"
+            links={[
+              {
+                target: "All Page",
+                displayName: "All",
+                handleOnClick: target => {
+                  console.log("from Header", target);
+                }
+              },
+              {
+                target: "Bowls Page",
+                displayName: "Bowls",
+                handleOnClick: target => {
+                  console.log("from Header", target);
+                }
               }
-            },
-            {
-              target: "Bowls Page",
-              displayName: "Bowls",
-              handleOnClick: target => {
-                console.log("from Header", target);
+            ]}
+          ></MenuItem>
+          <MenuItem
+            displayName="Zine"
+            links={[
+              {
+                target: "Issue1 Page",
+                displayName: "Issue1",
+                handleOnClick: target => {
+                  console.log("from Header", target);
+                }
+              },
+              {
+                target: "Issue2 Page",
+                displayName: "Issue2",
+                handleOnClick: target => {
+                  console.log("from Header", target);
+                }
               }
-            }
-          ]}
-        ></MenuItem>
-        <MenuItem
-          displayName="Zine"
-          links={[
-            {
-              target: "Issue1 Page",
-              displayName: "Issue1",
-              handleOnClick: target => {
-                console.log("from Header", target);
+            ]}
+          ></MenuItem>
+        </div>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            border: "1px solid grey"
+          }}
+        >
+          <MenuItem
+            displayName="Happy Plank Ceramics"
+            links={[
+              {
+                target: "HomePage",
+                displayName: "",
+                handleOnClick: target => {
+                  console.log("from Header", target);
+                }
               }
-            },
-            {
-              target: "Issue2 Page",
-              displayName: "Issue2",
-              handleOnClick: target => {
-                console.log("from Header", target);
+            ]}
+          ></MenuItem>
+        </div>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            border: "1px solid purple"
+          }}
+        >
+          <MenuItem
+            displayName="About"
+            links={[
+              {
+                target: "About Page",
+                displayName: "",
+                handleOnClick: target => {
+                  console.log("from Header", target);
+                }
               }
-            }
-          ]}
-        ></MenuItem>
-        <MenuItem
-          displayName="Happy Plank Ceramics"
-          links={[
-            {
-              target: "HomePage",
-              displayName: "",
-              handleOnClick: target => {
-                console.log("from Header", target);
+            ]}
+          ></MenuItem>
+          <MenuItem
+            displayName="Cart"
+            links={[
+              {
+                target: "Cart Page",
+                displayName: "",
+                handleOnClick: target => {
+                  console.log("from Header", target);
+                }
               }
-            }
-          ]}
-        ></MenuItem>
-        <MenuItem
-          displayName="About"
-          links={[
-            {
-              target: "About Page",
-              displayName: "",
-              handleOnClick: target => {
-                console.log("from Header", target);
-              }
-            }
-          ]}
-        ></MenuItem>
-        <MenuItem
-          displayName="Cart"
-          links={[
-            {
-              target: "Cart Page",
-              displayName: "",
-              handleOnClick: target => {
-                console.log("from Header", target);
-              }
-            }
-          ]}
-        ></MenuItem>
+            ]}
+          ></MenuItem>
+        </div>
       </div>
     );
   }
