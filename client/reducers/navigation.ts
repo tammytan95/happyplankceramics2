@@ -9,10 +9,12 @@ import { RootState } from ".";
 //interface is the shape of an object
 export interface NavigationState {
   location: "homepage" | "aboutme" | "productpage";
+  currentProduct: string;
 }
 //var like initialState can have the shape of NavState
 const initialState: NavigationState = {
-  location: "homepage"
+  location: "homepage",
+  currentProduct: ""
 };
 
 //navigation is function with type of function and takes in state and action as its params and returns type Navigation state
@@ -24,6 +26,13 @@ const navigation: (state: NavigationState, action: any) => NavigationState = (
     case "SET_LOCATION": {
       //updateIn updates an object
       return updateIn(state, ["location"], () => action.payload.location);
+    }
+    case "UPDATE_CURRENT_PRODUCT": {
+      return updateIn(
+        state,
+        ["currentProduct"],
+        () => action.payload.currentProduct
+      );
     }
   }
   return state;

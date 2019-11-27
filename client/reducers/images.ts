@@ -13,19 +13,19 @@ const initialState: ImagesState = {
     {
       image: {
         displayName: "Img1",
-        imgTarget: "Product Page/Img 1",
+        imgTarget: "/breeds/dane-great/n02109047_34093.jpg",
         url: "https://dog.ceo/img/dog.jpg"
       }
     },
     {
       image1: {
         displayName: "Img1",
-        imgTarget: "Product Page/Img 1",
+        imgTarget: "/breeds/mastiff-bull/n02108422_2209.jpg",
         url: "https://dog.ceo/img/dog.jpg"
       },
       image2: {
         displayName: "Img1",
-        imgTarget: "Product Page/Img 1",
+        imgTarget: "/breeds/papillon/n02086910_9041.jpg",
         url: "https://dog.ceo/img/dog.jpg"
       }
     }
