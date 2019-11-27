@@ -17,12 +17,11 @@ export class Image extends Component<ImageProps> {
     const { imgTarget, handleOnClick, url, displayName } = this.props;
     return (
       <div
-        style={{ border: "1px solid green" }}
         onClick={() => {
           handleOnClick(imgTarget);
         }}
       >
-        {displayName}
+        {/* {displayName} */}
         <img src={url}></img>
       </div>
     );

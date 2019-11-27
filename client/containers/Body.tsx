@@ -32,7 +32,7 @@ class _Body extends Component<BodyProps> {
           <div>
             Product Page
             <div>
-              {this.props.currentProduct}
+              {/* {this.props.currentProduct} */}
 
               <img
                 src={`https://i.imgur.com${this.props.currentProduct}`}

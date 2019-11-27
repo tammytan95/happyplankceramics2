@@ -23,7 +23,7 @@ export class Gallery extends Component<GalleryProps> {
       this.props.updateCurrentProduct(target);
     };
     return (
-      <>
+      <div>
         {this.props.imageRows.map((imageRow, i) => {
           if (isSingleImgRow(imageRow)) {
             return (
@@ -51,7 +51,7 @@ export class Gallery extends Component<GalleryProps> {
             );
           }
         })}
-      </>
+      </div>
     );
   }
 }

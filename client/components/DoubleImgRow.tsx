@@ -12,7 +12,12 @@ interface DoubleImgRowProps {
 export class DoubleImgRow extends Component<DoubleImgRowProps> {
   render() {
     return (
-      <div style={{ display: "flex", border: "1px solid green" }}>
+      <div
+        style={{
+          // border: "1px solid green",
+          display: "flex"
+        }}
+      >
         <Image
           // Image interface is the same shape as Image Props and this is basically deconstructuring the keys in image props
           {...this.props.image1}
