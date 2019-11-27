@@ -8,7 +8,7 @@ import { RootState } from ".";
 //traces where the user is in the site e.g.menu, page
 //interface is the shape of an object
 export interface NavigationState {
-  location: "homepage" | "aboutme" | "productpage";
+  location: "homepage" | "aboutme" | "productpage" | "categorypage";
   currentProduct: string;
 }
 //var like initialState can have the shape of NavState
@@ -44,7 +44,7 @@ export default navigation;
 //this is a selector
 export const locationSelector: (
   state: RootState
-) => "homepage" | "aboutme" | "productpage" = state =>
+) => "homepage" | "aboutme" | "productpage" | "categorypage" = state =>
   state.navigation.location;
 
 export const isLocationHomepageSelector: (

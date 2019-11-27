@@ -27,6 +27,7 @@ class _Body extends Component<BodyProps> {
             updateCurrentProduct={this.props.updateCurrentProduct}
           ></Gallery>
         ) : null}
+
         {this.props.location === "productpage" ? (
           <div>
             Product Page
@@ -34,7 +35,7 @@ class _Body extends Component<BodyProps> {
               {this.props.currentProduct}
 
               <img
-                src={`https://images.dog.ceo${this.props.currentProduct}`}
+                src={`https://i.imgur.com${this.props.currentProduct}`}
                 alt=""
               />
             </div>

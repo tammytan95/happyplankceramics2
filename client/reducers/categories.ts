@@ -3,13 +3,14 @@ import { Action } from "redux";
 import { update, updateIn } from "timm";
 import { RootState } from ".";
 import { SingleImgRowInterface, DoubleImgRowInterface } from "../components";
+import { MenuItemProps } from "../components";
 
-export interface ImagesState {
-  frontPgImages: Array<any>;
+export interface CategoriesState {
+  menuItems: Array<any>;
 }
 
-const initialState: ImagesState = {
-  frontPgImages: [
+const initialState: CategoriesState = {
+  menuItems: [
     {
       image: {
         displayName: "Img1",
@@ -32,7 +33,7 @@ const initialState: ImagesState = {
   ]
 };
 
-const images: (state: ImagesState, action: any) => ImagesState = (
+const categories: (state: CategoriesState, action: any) => CategoriesState = (
   state = initialState,
   action
 ) => {
@@ -42,4 +43,4 @@ const images: (state: ImagesState, action: any) => ImagesState = (
   }
 };
 
-export default images;
+export default categories;

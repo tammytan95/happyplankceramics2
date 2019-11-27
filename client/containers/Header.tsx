@@ -11,8 +11,8 @@ import { Link, OpenDropdown, MenuItem } from "../components";
 
 //the Props has to have the shape of NavigationState type
 interface HeaderProps {
-  location: "homepage" | "aboutme";
-  setLocation: (location: "homepage" | "aboutme") => Action;
+  location?: any;
+  setLocation: typeof setLocationActionCreator;
 }
 
 //App is a react component and it must receive AppProps as a prop
@@ -53,6 +53,18 @@ class _Header extends Component<HeaderProps> {
             {
               target: "Issue2 Page",
               displayName: "Issue2",
+              handleOnClick: target => {
+                console.log("from Header", target);
+              }
+            }
+          ]}
+        ></MenuItem>
+        <MenuItem
+          displayName="Happy Plank Ceramics"
+          links={[
+            {
+              target: "HomePage",
+              displayName: "",
               handleOnClick: target => {
                 console.log("from Header", target);
               }

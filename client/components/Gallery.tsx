@@ -13,6 +13,7 @@ interface GalleryProps {
   updateCurrentProduct: typeof updateCurrentProductActionCreator;
 }
 
+//for SingleImgRow, there is only 1 image in imgRow vs 2 images in DoubleImgRow
 const isSingleImgRow = imgRow => imgRow.image !== undefined;
 
 export class Gallery extends Component<GalleryProps> {
