@@ -23,7 +23,7 @@ class _Header extends Component<HeaderProps> {
         style={{
           display: "flex",
           flexDirection: "row",
-          border: "1px solid purple",
+          // border: "1px solid purple",
           justifyContent: "space-between",
           fontSize: "15px",
           fontFamily: "Heebo, sans-serif",
@@ -35,12 +35,12 @@ class _Header extends Component<HeaderProps> {
           style={{
             display: "flex",
             flexDirection: "row",
-            border: "1px solid red",
+            // border: "1px solid red",
             justifyContent: "space-between"
           }}
         >
           <MenuItem
-            displayName="SHOP"
+            displayName="   SHOP   "
             links={[
               {
                 target: "All Page",
@@ -59,7 +59,7 @@ class _Header extends Component<HeaderProps> {
             ]}
           ></MenuItem>
           <MenuItem
-            displayName="ZINE"
+            displayName="   ZINE   "
             links={[
               {
                 target: "Issue1 Page",
@@ -81,8 +81,8 @@ class _Header extends Component<HeaderProps> {
         <div
           style={{
             display: "flex",
-            flexDirection: "row",
-            border: "1px solid grey"
+            flexDirection: "row"
+            // border: "1px solid grey"
           }}
         >
           <MenuItem
@@ -101,12 +101,12 @@ class _Header extends Component<HeaderProps> {
         <div
           style={{
             display: "flex",
-            flexDirection: "row",
-            border: "1px solid purple"
+            flexDirection: "row"
+            // border: "1px solid purple"
           }}
         >
           <MenuItem
-            displayName="ABOUT"
+            displayName="   ABOUT   "
             links={[
               {
                 target: "About Page",
@@ -118,7 +118,7 @@ class _Header extends Component<HeaderProps> {
             ]}
           ></MenuItem>
           <MenuItem
-            displayName="CART"
+            displayName="   CART   "
             links={[
               {
                 target: "Cart Page",

@@ -12,7 +12,7 @@ export class SingleImgRow extends Component<SingleImgRowProps> {
     return (
       <div
         style={{
-          border: "1px solid green",
+          // border: "1px solid green",
           display: "flex",
           justifyContent: "center"
         }}

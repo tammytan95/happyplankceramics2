@@ -24,9 +24,11 @@ export class MenuItem extends Component<MenuItemProps, MenuItemState> {
 
     return (
       <div
-        style={{
-          border: "1px solid blue"
-        }}
+        style={
+          {
+            // border: "1px solid blue"
+          }
+        }
       >
         <div
           onClick={() =>

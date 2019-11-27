@@ -17,9 +17,11 @@ export class Link extends Component<LinkProps> {
 
     return (
       <div
-        style={{
-          border: "1px solid orange"
-        }}
+        style={
+          {
+            // border: "1px solid orange"
+          }
+        }
         onClick={() => {
           handleOnClick(target);
         }}

@@ -10,7 +10,7 @@ export class OpenDropdown extends Component<OpenDropdownProps> {
     const { links } = this.props;
 
     return (
-      <div style={{ border: "1px solid black" }}>
+      <div>
         {links.map((link, i) => {
           const { target, displayName, handleOnClick } = link;
           //   console.log(displayName);
