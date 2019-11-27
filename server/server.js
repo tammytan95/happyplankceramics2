@@ -3,10 +3,16 @@ const express = require("express");
 const bodyParser = require("body-parser");
 
 const app = express();
-
+const PORT = 3000;
+/**
+ * require routers
+ */
 const apiRouter = require("./routes/api");
 
-const PORT = 3000;
+/**
+ * handle requests for static files
+ */
+app.use(express.static(path.resolve(__dirname, "../dist")));
 
 /**
  * handle parsing request body
@@ -14,20 +20,15 @@ const PORT = 3000;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-/**
- * handle requests for static files
- */
-app.use("/assets", express.static(path.resolve(__dirname, "../client/assets")));
+// respond with main app
+app.get("/", (req, res) =>
+  res.status(200).sendFile(path.resolve(__dirname, "../dist/"))
+);
 
 /**
  * define route handlers
  */
 app.use("/api", apiRouter);
-
-// respond with main app
-app.get("/", (req, res) =>
-  res.status(200).sendFile(path.resolve(__dirname, "../client/index.html"))
-);
 
 // catch-all route handler for any requests to an unknown route
 app.use((req, res) => res.sendStatus(404));
@@ -50,4 +51,4 @@ app.listen(PORT, () => {
   console.log(`Server listening on port: ${PORT}`);
 });
 
-module.exports = app;
+// module.exports = app;

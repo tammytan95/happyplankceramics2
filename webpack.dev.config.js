@@ -7,7 +7,7 @@ const entry = path.resolve(__dirname, "./client/index.tsx");
 
 const output = {
   // path: path.resolve(__dirname, "dist"),
-  publicPath: "/",
+  publicPath: "/dist/",
   filename: "bundle.js"
 };
 
@@ -20,8 +20,8 @@ module.exports = {
     extensions: [".ts", ".tsx", ".js", ".jsx"]
   },
   devServer: {
-    port: 3000,
-    proxy: { "/path": "http://localhost:4000" }
+    port: 8080,
+    proxy: { "/path": "http://localhost:3000" }
   },
   module: {
     rules: [

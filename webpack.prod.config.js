@@ -7,8 +7,8 @@ const entry = path.resolve(__dirname, "./client/index.tsx");
 
 const output = {
   //assume no need because it defaults
-  // path: path.resolve(__dirname, "dist"),
-  publicPath: "/",
+  path: path.resolve(__dirname, "dist"),
+  // publicPath: "/dist/",
   filename: "bundle.js"
 };
 
