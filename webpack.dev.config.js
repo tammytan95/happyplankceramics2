@@ -21,7 +21,8 @@ module.exports = {
   },
   devServer: {
     port: 8080,
-    proxy: { "/path": "http://localhost:3000" }
+    proxy: { "/path": "http://localhost:3000" },
+    contentBase: path.join(__dirname, "./dist")
   },
   module: {
     rules: [
